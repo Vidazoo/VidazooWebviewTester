@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VidazooWebviewTester" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8yO-cT-XSH">
+                                <rect key="frame" x="0.0" y="45" width="736" height="369"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4e-8G-8wk" userLabel="Address">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="45"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r1m-YE-NH3">
+                                        <rect key="frame" x="8" y="7" width="666" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISA-DX-sSP">
+                                        <rect key="frame" x="694" y="7" width="34" height="30"/>
+                                        <state key="normal" title="Load"/>
+                                        <connections>
+                                            <action selector="onLoadClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GOj-ZW-7tg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Aar-Zd-J0q"/>
+                                    <constraint firstAttribute="bottom" secondItem="r1m-YE-NH3" secondAttribute="bottom" constant="8" id="egI-pT-Sbe"/>
+                                    <constraint firstAttribute="trailing" secondItem="ISA-DX-sSP" secondAttribute="trailing" constant="8" id="hZV-hm-yC7"/>
+                                    <constraint firstItem="r1m-YE-NH3" firstAttribute="top" secondItem="q4e-8G-8wk" secondAttribute="top" constant="7" id="laO-DF-K0e"/>
+                                    <constraint firstAttribute="bottom" secondItem="ISA-DX-sSP" secondAttribute="bottom" constant="8" id="r1t-KZ-Udy"/>
+                                    <constraint firstItem="r1m-YE-NH3" firstAttribute="leading" secondItem="q4e-8G-8wk" secondAttribute="leading" constant="8" id="xTM-dn-aVl"/>
+                                    <constraint firstItem="ISA-DX-sSP" firstAttribute="leading" secondItem="r1m-YE-NH3" secondAttribute="trailing" constant="20" id="yDT-HN-bkI"/>
+                                    <constraint firstItem="ISA-DX-sSP" firstAttribute="top" secondItem="q4e-8G-8wk" secondAttribute="top" constant="7" id="zZT-06-uHM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="q4e-8G-8wk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0ul-zl-g6A"/>
+                            <constraint firstItem="8yO-cT-XSH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4dg-up-XDi"/>
+                            <constraint firstItem="q4e-8G-8wk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7pW-Ag-TtB"/>
+                            <constraint firstItem="8yO-cT-XSH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DNw-Ic-fuI"/>
+                            <constraint firstItem="8yO-cT-XSH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="E7N-xN-TYE"/>
+                            <constraint firstItem="q4e-8G-8wk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZK4-3r-tSc"/>
+                            <constraint firstItem="8yO-cT-XSH" firstAttribute="top" secondItem="q4e-8G-8wk" secondAttribute="bottom" id="nzk-MZ-OIb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="address" destination="r1m-YE-NH3" id="ndY-b0-Ay7"/>
+                        <outlet property="loadBtn" destination="ISA-DX-sSP" id="AQC-Nv-5B7"/>
+                        <outlet property="webview" destination="8yO-cT-XSH" id="xa6-zX-d2S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-86.956521739130437" y="131.25"/>
+        </scene>
+    </scenes>
+</document>
