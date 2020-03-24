@@ -24,13 +24,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onLoadClick(_ sender: Any) {
-        let url = self.address.text;
         
-        if (url != "") {
-            let url = URL(string: url!);
-            let req = URLRequest(url: url!);
-            
-            self.webview.load(req);
+        guard let url = self.address.text else {
+            return
         }
+        
+        let urlObj = NSURL(string: url)
+        let req = URLRequest(url: urlObj! as URL)
+
+        self.webview.load(req)
     }
 }
